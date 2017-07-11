@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using SmartHealth.Core.Domain;
 using System.Collections.Generic;
 using SmartHealth.Core.Interfaces.Repositories;
