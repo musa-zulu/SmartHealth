@@ -7,6 +7,7 @@ namespace SmartHealth.DB
     public interface ISmartHealthDbContext
     {
         IDbSet<Patient> Patient { get; set; }
+        int SaveChanges();
     }
     public class SmartHealthDbContext : DbContext, ISmartHealthDbContext
     {

@@ -6,5 +6,6 @@ namespace SmartHealth.Core.Interfaces.Repositories
     public interface IPatientRepository
     {
         List<Patient> GetAll();
+        void Save(Patient patient);
     }
 }

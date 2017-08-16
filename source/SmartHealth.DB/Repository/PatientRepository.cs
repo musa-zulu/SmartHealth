@@ -2,6 +2,7 @@
 using SmartHealth.Core.Domain;
 using System.Collections.Generic;
 using SmartHealth.Core.Interfaces.Repositories;
+using System;
 
 namespace SmartHealth.DB.Repository
 {
@@ -14,5 +15,13 @@ namespace SmartHealth.DB.Repository
         }
 
         public List<Patient> GetAll() => _smartHealthDbContext.Patient.ToList();
+
+        public void Save(Patient patient)
+        {
+            if (patient == null) throw new ArgumentNullException(nameof(patient));
+            patient.PatientId = Guid.NewGuid();
+            _smartHealthDbContext.Patient.Add(patient);
+            _smartHealthDbContext.SaveChanges();
+        }
     }
 }

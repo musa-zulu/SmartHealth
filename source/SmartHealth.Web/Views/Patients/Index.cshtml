@@ -1,17 +1,16 @@
-﻿@model IEnumerable<SmartHealth.Web.ViewModels.PatientsViewModel>
+﻿@model IEnumerable<SmartHealth.Web.ViewModels.PatientViewModel>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "List of Patients";
 }
 
-<h2>List of Patients</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>       
+    <tr>      
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
@@ -22,10 +21,10 @@
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HomeAddress)
+            @Html.Display("Home Address")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.WorkAddress)
+            @Html.Display("Work Address")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.HomeNumber)
@@ -40,7 +39,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>  
+    <tr>        
         <td>
             @Html.DisplayFor(modelItem => item.FirstName)
         </td>
@@ -51,10 +50,10 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HomeAddress)
+            @Html.DisplayFor(modelItem => item.HomeAddress.AddressLineOne)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.WorkAddress)
+            @Html.DisplayFor(modelItem => item.WorkAddress.AddressLineOne)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.HomeNumber)
@@ -66,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.CellPhone)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }
