@@ -9,7 +9,6 @@ namespace SmartHealth.Core.Domain
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Initials { get; set; }
-        public string FullName { get; set; }
         public string Email { get; set; }
         public long HomeNumber { get; set; }
         public long WorkNumber { get; set; }
@@ -21,7 +20,6 @@ namespace SmartHealth.Core.Domain
         public string Province { get; set; }
         public string City { get; set; }
         public string PostalCode { get; set; }
-        public string FullAddress { get; set; }
         public virtual Title Title { get; set; }
         public virtual Appointment Appointment { get; set; }
     }
