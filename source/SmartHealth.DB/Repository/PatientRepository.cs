@@ -8,7 +8,7 @@ namespace SmartHealth.DB.Repository
 {
     public class PatientRepository : IPatientRepository
     {
-        readonly ISmartHealthDbContext _smartHealthDbContext;
+        private readonly ISmartHealthDbContext _smartHealthDbContext;
         public PatientRepository(ISmartHealthDbContext smartHealthDbContext)
         {
             _smartHealthDbContext = smartHealthDbContext;
@@ -19,7 +19,7 @@ namespace SmartHealth.DB.Repository
         public void Save(Patient patient)
         {
             if (patient == null) throw new ArgumentNullException(nameof(patient));
-            patient.PatientId = Guid.NewGuid();
+            patient.Id = Guid.NewGuid();
             _smartHealthDbContext.Patient.Add(patient);
             _smartHealthDbContext.SaveChanges();
         }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{188CD6BC-7400-4260-8FFE-C5DEFE476DEF}</ProjectGuid>
+    <ProjectGuid>{56933724-431C-4597-9DDE-B5050EA7F2B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SmartHealth.Core</RootNamespace>
-    <AssemblyName>SmartHealth.Core</AssemblyName>
+    <RootNamespace>SmartHealth.Models</RootNamespace>
+    <AssemblyName>SmartHealth.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,18 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultDateTimeProvider.cs" />
-    <Compile Include="Domain\Address.cs" />
-    <Compile Include="Domain\EntityBase.cs" />
-    <Compile Include="Domain\Patient.cs" />
-    <Compile Include="Domain\Person.cs" />
-    <Compile Include="Domain\Surgery.cs" />
-    <Compile Include="Domain\Title.cs" />
-    <Compile Include="IDateTimeProvider.cs" />
-    <Compile Include="Interfaces\Repositories\IPatientRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

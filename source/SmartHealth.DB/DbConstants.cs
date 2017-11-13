@@ -9,7 +9,7 @@
                 public const string TableName = "Patient";
                 public class Columns
                 {
-                    public const string PatientId = "PatientId";
+                    public const string Id = "Id";
                     public const string FirstName = "FirstName";
                     public const string LastName = "LastName";
                     public const string Email = "Email";
