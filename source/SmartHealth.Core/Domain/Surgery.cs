@@ -5,8 +5,8 @@ namespace SmartHealth.Core.Domain
 {
     public class Surgery : EntityBase
     {
-        public int? PatientId { get; set; }
-        public int SurgeryTypeId { get; set; }
+        public Guid? PatientId { get; set; }
+        public Guid SurgeryTypeId { get; set; }
         public string SurgeryRegNumber { get; set; }
         public string PhysicalAddressLine1 { get; set; }
         public string PhysicalAddressLine2 { get; set; }
@@ -31,8 +31,8 @@ namespace SmartHealth.Core.Domain
 
     public class WaitingList : EntityBase
     {
-        public int PatientId { get; set; }
-        public int SurgeryTypeId { get; set; }
+        public Guid PatientId { get; set; }
+        public Guid SurgeryTypeId { get; set; }
         public bool IsPrimaryChoice { get; set; }
         public DateTime? WaitingListDate { get; set; }
 
