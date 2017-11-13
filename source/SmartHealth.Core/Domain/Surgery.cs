@@ -15,26 +15,29 @@ namespace SmartHealth.Core.Domain
         public virtual Patient Patient { get; set; }
     }
 
-    public class SurgeryType : EntityBase
+    public sealed class SurgeryType : EntityBase
     {
         public string Description { get; set; }
         public string Code { get; set; }
-        public virtual ICollection<Surgery> Surgery { get; set; }
-        public virtual ICollection<WaitingList> WaitingLists { get; set; }
+        public ICollection<Surgery> Surgery { get; set; }
+        public ICollection<Appointment> Appointments { get; set; }
 
         public SurgeryType()
         {
             Surgery = new List<Surgery>();
-            WaitingLists = new List<WaitingList>();
+            Appointments = new List<Appointment>();
         }
     }
 
-    public class WaitingList : EntityBase
+    public class Appointment : EntityBase
     {
         public Guid PatientId { get; set; }
         public Guid SurgeryTypeId { get; set; }
         public bool IsPrimaryChoice { get; set; }
         public DateTime? WaitingListDate { get; set; }
+        public DateTime AppointmentDate { get; set; }
+        public DateTime AppointmentTime { get; set; }
+        public string AppointmentReason { get; set; }
 
     }
 }

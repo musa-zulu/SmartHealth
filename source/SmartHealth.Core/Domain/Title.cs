@@ -2,7 +2,7 @@
 
 namespace SmartHealth.Core.Domain
 {
-    public class Title : EntityBase
+    public sealed class Title : EntityBase
     {
         public Title()
         {
@@ -10,6 +10,6 @@ namespace SmartHealth.Core.Domain
         }
 
         public string Description { get; set; }
-        public virtual ICollection<Person> People { get; set; }
+        public ICollection<Person> People { get; set; }
     }
 }

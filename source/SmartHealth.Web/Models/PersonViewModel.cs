@@ -20,6 +20,7 @@ namespace SmartHealth.Web.Models
         public string City { get; set; }
         public string PostalCode { get; set; }
         public List<SelectList> Title { get; set; }
+        public Guid AppontmentId { get; set; }
 
         public string FullName
         {
@@ -39,7 +40,7 @@ namespace SmartHealth.Web.Models
                 return fullName;
             }
         }
-        public string FullAddress 
+        public string FullAddress
         {
             get
             {

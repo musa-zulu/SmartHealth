@@ -1,11 +1,6 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace SmartHealth.Web.Models
+﻿namespace SmartHealth.Web.Models
 {
-    public class PatientsViewModel
+    public class PatientsViewModel : PersonViewModel
     {
-        [Key]
-        public Guid Id { get; set; }
     }
 }
