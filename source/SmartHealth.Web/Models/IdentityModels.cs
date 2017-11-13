@@ -29,5 +29,11 @@ namespace SmartHealth.Web.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<SmartHealth.Core.Domain.Patient> People { get; set; }
+
+        public System.Data.Entity.DbSet<SmartHealth.Core.Domain.Appointment> Appointments { get; set; }
+
+        public System.Data.Entity.DbSet<SmartHealth.Core.Domain.Title> Titles { get; set; }
     }
 }

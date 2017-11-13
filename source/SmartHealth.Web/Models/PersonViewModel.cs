@@ -17,10 +17,14 @@ namespace SmartHealth.Web.Models
         public string PhysicalAddressLine2 { get; set; }
         public string Suburb { get; set; }
         public string Province { get; set; }
+        public string Email { get; set; }
+        public long HomeNumber { get; set; }
+        public long WorkNumber { get; set; }
         public string City { get; set; }
         public string PostalCode { get; set; }
         public List<SelectList> Title { get; set; }
         public Guid AppontmentId { get; set; }
+        public string AppointmentReason { get; set; }
 
         public string FullName
         {
